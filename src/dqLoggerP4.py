@@ -57,7 +57,8 @@ class ReadLine:
             self.buf = self.buf[i+1:]
             return r
         while True:
-            i = max(1, min(2048, self.s.in_waiting))
+            # changed this for older versions of the pyserial package
+            i = max(1, min(2048, self.s.inWaiting()))
             data = self.s.read(i)
             
             # return on read (serial port) timeout
