@@ -54,7 +54,7 @@ if [[ "$*" == *"--skip-pip"* ]]; then
     printf "[PIP] Skipping installing Python packages\n"
 else
     printf "[PIP] Installing Python Packages...\n"
-    pip install pySerial pandas
+    pip install pySerial pandas influxdb-client
     if [ $? -ne 0 ]; then
         printf "[PIP] Error installing PyPI packages\n"
         exit 1
