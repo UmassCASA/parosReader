@@ -152,6 +152,12 @@ if [ "$frp" = "y" ]; then
     systemctl enable frpc.service
 fi
 
+if [ "$usb_tethering" = "y" ]; then
+    printf "[USB Tethering] Enabling DHCP on USB0...\n"
+    echo "allow-hotplug usb0" >> /etc/network/interfaces
+    echo "iface usb0 inet dhcp" >> /etc/network/interfaces
+fi
+
 printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
 echo "Setup script complete!"
 echo ""

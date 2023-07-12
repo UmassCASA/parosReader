@@ -37,3 +37,8 @@ frp_port="7000"  # If frp="y", what is the port?
 frp_bind_port="10001"  # If frp="y", what is the bind port?
 frp_token=""  # If frp="y", what is the token?
 frp_download="https://github.com/fatedier/frp/releases/download/v0.49.0/frp_0.49.0_linux_arm64.tar.gz"  # If frp="y", what is the download link?
+
+#
+# Other Vars
+#
+usb_tethering="n"  # Is this box using USB tethering? (y/n)
